@@ -1,0 +1,18 @@
+id: 05c7a3a3-1103-4dc4-9e79-ffcafe304f97
+timestamp: 2023-06-02T21:01:04Z
+username: x95castle1
+source: TAP-GUI
+accelerator:
+  name: appsso-starter-java
+  source:
+    image: registry.harbor.learn.tapsme.org/tap/tap-packages@sha256:91412353c900cbf49cc7d959c2d5891c9f5bfd6fd9d563bd874ba28cf4674c04
+fragments:
+  - name: build-wrapper-gradle
+    source:
+      image: registry.harbor.learn.tapsme.org/tap/tap-packages@sha256:5480259d6a29a11f0cc482cd304501d74ccd89dd7207f2d639d6f0d8eedc3bf8
+  - name: tap-workload
+    source:
+      image: registry.harbor.learn.tapsme.org/tap/tap-packages@sha256:dbf0dedb6848ad8a7704c1c19465a1ddae9039b0e63c1dd0df3e2ed9cbda6093
+options:
+  includeBuildToolWrapper: true
+  projectName: appsso-starter-java
