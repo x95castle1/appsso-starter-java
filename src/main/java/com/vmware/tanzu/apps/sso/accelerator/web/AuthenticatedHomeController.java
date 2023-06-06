@@ -19,7 +19,7 @@ public class AuthenticatedHomeController {
 
 		String allClaims = authenticatedUser.getClaims().entrySet().stream()
 				.map(entrySet -> entrySet.getKey() + ": " + entrySet.getValue())
-				.collect(Collectors.joining(", "));
+				.collect(Collectors.joining("<br>"));
 
 		model.addAttribute("all_claims", allClaims);
 
