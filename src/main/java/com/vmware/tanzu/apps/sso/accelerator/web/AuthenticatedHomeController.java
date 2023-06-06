@@ -12,6 +12,10 @@ public class AuthenticatedHomeController {
 	@GetMapping("/authenticated/home")
 	public String authenticatedHome(Model model, @AuthenticationPrincipal OidcUser authenticatedUser) {
 		model.addAttribute("username", authenticatedUser.getClaims().get("sub"));
+
+		authenticatedUser.getClaims().keySet().stream()
+                .forEach(System.out::println);
+
 		return "authenticated-home.html";
 	}
 

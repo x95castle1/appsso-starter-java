@@ -11,9 +11,6 @@ spec:
     env:
       - name: BP_JVM_VERSION
         value: "17"
-  params:
-    - name: live-update
-      value: "true"
   serviceClaims:
     - name: appsso-starter-java
       ref:
@@ -22,6 +19,6 @@ spec:
         name: appsso-starter-java
   source:
     git:
-      url: <https URL for your generated project's Git repository>
+      url: https://github.com/x95castle1/appsso-starter-java.git
       ref:
         branch: main
