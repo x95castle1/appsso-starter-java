@@ -21,6 +21,10 @@
 		<p>You are signed in.</p>
 	</section>
 	<section class="mt-3">
+		<p>Claims:</p>
+		<p th:utext="${all_claims}"></p>
+	</section>
+	<section class="mt-3">
 		<form th:name="${'logout-form'}" th:action="@{/logout}"
 			  th:if="${#authorization.expression('isAuthenticated()')}"
 			  method="post">
